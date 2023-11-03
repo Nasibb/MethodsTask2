@@ -55,21 +55,42 @@
 #region Task4
 //Verilmis n tam ededinin sade ve ya murekkeb oldugunu tapin.
 
-//int FindEvenOddNumers (int n)
+//string FindNumbers(int n)
 //{
-//    while (n==0)
+//    int count = default;
+//    for (int i = 1; i <= n; i++)
+//    {
+//        if (n % i == 0)
+//        {
+//            count++;
+//            if (count > 2)
+//            {
+//                return "murekkeb";
+//            }
+//        }
+//    }
+//    return "sade";
 //}
+//Console.WriteLine(FindNumbers(1039));
 
-//int num = 123;
-//int division = default;
-//for (int i = 1; i<=num; i++)
+
+//int num = 1037;
+//int count = 0;
+//for (int i = 1; i <= num; i++)
 //{
-//    if (i % 2 == 0)
-
-
+//    if (num % i == 0)
+//    {
+//        count++;
+//    }
 //}
-//Console.WriteLine(division);
-
+//if (count > 2)
+//{
+//    Console.WriteLine("Number is even");
+//}
+//else
+//{
+//    Console.WriteLine("Number is odd");
+//}
 
 #endregion
 
@@ -78,13 +99,13 @@
 //n ededi gelir. 2-ni hansisa quvvete yukseltdikde n-in alinan cavaba beraber olub-olmamasını tapın.
 //Meselen: Cavablar ola biler: 2,4,8,16,32 ve s. Yeni n bele ededler olmalidir.
 
+//int num = int.Parse(Console.ReadLine());
+
 
 #endregion
 
 #region Task6
 //Verilmish arrayin-in elementlerinin icinden 1-20 arasinda olanlarinin hasilini tapmaq.Mes ([1,3,55,6,33], cavab : 18).+RETURN
-
-using System.Diagnostics.CodeAnalysis;
 
 //int MultiNumbers(params int[] numbers)
 //{
@@ -119,6 +140,27 @@ using System.Diagnostics.CodeAnalysis;
 //    return exponentiation;
 //}
 //Console.WriteLine(Calculate(1,2,3,4,5,6,7,8,9,10));
+
+#endregion
+
+#region Task8
+//int tipindən bir array olur içində müsbət və mənfi ədədlər olur elə bir method yazın ki, bu array-i parametr olaraq qəbul etsin
+//və qəbul etdiyi array-in əvvəlcədən assign olunması məcburi olsun daha sonra içindəki mənfi ədədləri müsbətə çevirib həmin array-i geriyə qaytarsın
+
+//int[] number = { -29, 2, -30, -123, 5 };
+//int ExchangeNumbers (params int[] numbers)
+//{
+//    int save = 0;
+//    foreach (int number in numbers)
+//    {
+//        if (number < 0)
+//        {
+//            save = 1;
+//        }
+//    }
+//    return numbers[0];
+//}
+//Console.WriteLine(ExchangeNumbers(-29,2,-30,-123,5));
 
 #endregion
 
