@@ -1,17 +1,17 @@
 ﻿#region Task1
 //Verilmis n ve m (n<m) ededleri arasindaki tek ededlerin cemini tapin.+
 
-//int TwoNum (int n, int m)
+//int TwoNum(int n, int m)
 //{
 //    int sum = default;
-//    for (int i=n; i<=m; i++)
+//    for (int i = n; i <= m; i++)
 //    {
-//        if (i%2 == 1)
+//        if (i % 2 == 1)
 //        { sum += i; };
 //    }
 //    return sum;
 //}
-//Console.WriteLine(TwoNum (1,100));
+//Console.WriteLine(TwoNum(1, 100));
 
 #endregion
 
@@ -23,37 +23,37 @@
 //    int sum = default;
 //    foreach (int i in numbers)
 //    {
-//        if (i%2 != 0)
+//        if (i % 2 != 0)
 //        {
 //            sum += i;
-//        }    
+//        }
 //    }
 //    return sum;
 //}
-//Console.WriteLine(SumOddNumbers (1,2,3,4,5,6,7,8,9,10));
+//Console.WriteLine(SumOddNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
 #endregion
 
 #region Task3
 //Verilmish arrayin icindeki cut ededlerin sayini tapin.+
 
-//int CountEvenNumbers (int[] numbers)
+//int CountEvenNumbers(int[] numbers)
 //{
 //    int count = 0;
 //    foreach (int n in numbers)
-//        if (n %2== 0)
+//        if (n % 2 == 0)
 //        {
 //            count++;
 //        }
 //    return count;
 //}
-//int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12 };
+//int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 //Console.WriteLine(CountEvenNumbers(nums));
 
 #endregion
 
 #region Task4
-//Verilmis n tam ededinin sade ve ya murekkeb oldugunu tapin.
+//Verilmis n tam ededinin sade ve ya murekkeb oldugunu tapin.+1
 
 //string FindNumbers(int n)
 //{
@@ -73,25 +73,6 @@
 //}
 //Console.WriteLine(FindNumbers(1039));
 
-
-//int num = 1037;
-//int count = 0;
-//for (int i = 1; i <= num; i++)
-//{
-//    if (num % i == 0)
-//    {
-//        count++;
-//    }
-//}
-//if (count > 2)
-//{
-//    Console.WriteLine("Number is even");
-//}
-//else
-//{
-//    Console.WriteLine("Number is odd");
-//}
-
 #endregion
 
 #region Task5
@@ -99,7 +80,24 @@
 //n ededi gelir. 2-ni hansisa quvvete yukseltdikde n-in alinan cavaba beraber olub-olmamasını tapın.
 //Meselen: Cavablar ola biler: 2,4,8,16,32 ve s. Yeni n bele ededler olmalidir.
 
-//int num = int.Parse(Console.ReadLine());
+int n = 1026;
+int count = default;
+while (n%2==0)
+{
+    n/=2;
+    count++;
+}
+if (n==1)
+{
+    Console.WriteLine(count);
+}
+else
+{
+    Console.WriteLine("deyil");
+}
+        
+
+
 
 
 #endregion
