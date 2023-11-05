@@ -140,19 +140,23 @@
 //int tipindən bir array olur içində müsbət və mənfi ədədlər olur elə bir method yazın ki, bu array-i parametr olaraq qəbul etsin
 //və qəbul etdiyi array-in əvvəlcədən assign olunması məcburi olsun daha sonra içindəki mənfi ədədləri müsbətə çevirib həmin array-i geriyə qaytarsın
 
-int NumberWithMinus(params int[] numbers)
+void NumberWithMinus(params int[] numbers)
 {
-    foreach (int number in numbers)
-        if (number < 0)
-        {
-            return number - (number * 2);
-        }
-        else
-        {
-            return number;
-        }
+	for (int i = 0; i < numbers.Length; i++)
+	{
+		if (numbers[i]<0)
+		{
+			numbers[i] = numbers[i]*-1;
+		}
+	}
 }
-Console.WriteLine(NumberWithMinus(-5, 2, -123, 29, -5));
+int[] numbers = { -1, 2, - 52, 8 };
+NumberWithMinus(numbers);
+for (int i = 0; i < numbers.Length; i++)
+{
+	Console.Write(numbers[i]);
+		Console.Write(" ");
+}
 
 //int[] NumberWithMinus = { -5, 2, -123, 29, -5 };
 //int change = 0;
