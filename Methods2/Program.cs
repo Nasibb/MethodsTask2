@@ -53,7 +53,7 @@
 #endregion
 
 #region Task4
-//Verilmis n tam ededinin sade ve ya murekkeb oldugunu tapin.+1
+//Verilmis n tam ededinin sade ve ya murekkeb oldugunu tapin.
 
 //string FindNumbers(int n)
 //{
@@ -80,30 +80,26 @@
 //n ededi gelir. 2-ni hansisa quvvete yukseltdikde n-in alinan cavaba beraber olub-olmamasını tapın.
 //Meselen: Cavablar ola biler: 2,4,8,16,32 ve s. Yeni n bele ededler olmalidir.
 
-int n = 1026;
-int count = default;
-while (n%2==0)
-{
-    n/=2;
-    count++;
-}
-if (n==1)
-{
-    Console.WriteLine(count);
-}
-else
-{
-    Console.WriteLine("deyil");
-}
-        
-
-
-
+//int Number (int n)
+//{
+//    int count = default;
+//    while(n%2==0)
+//    {
+//        n /= 2;
+//        count++;
+//    }
+//    if (n==1)
+//    {
+//        return count;
+//    }
+//    return 0;
+//}
+//Console.WriteLine(Number(1024));
 
 #endregion
 
 #region Task6
-//Verilmish arrayin-in elementlerinin icinden 1-20 arasinda olanlarinin hasilini tapmaq.Mes ([1,3,55,6,33], cavab : 18).+RETURN
+//Verilmish arrayin-in elementlerinin icinden 1-20 arasinda olanlarinin hasilini tapmaq.Mes ([1,3,55,6,33], cavab : 18).
 
 //int MultiNumbers(params int[] numbers)
 //{
@@ -115,13 +111,12 @@ else
 //        }
 //    return multi;
 //}
-////Console.WriteLine(MultiNumbers(21, 23, 123, 35));
-//Console.WriteLine(MultiNumbers(21,23,5,15,18,123,35,20,1,10,5));
+//Console.WriteLine(MultiNumbers(21, 23, 5, 15, 18, 123, 35, 20, 1, 10, 5));
 
 #endregion
 
 #region Task7
-//Verilmish arrayin elementlerininden cut olanlarinin ceminin kvadratini tapmaq.+RETURN
+//Verilmish arrayin elementlerininden cut olanlarinin ceminin kvadratini tapmaq.
 
 //int Calculate(params int[] numbers)
 //{
@@ -130,14 +125,14 @@ else
 //    foreach (var number in numbers)
 //    {
 //        if (number % 2 == 0)
-//        { 
+//        {
 //            sum += number;
 //            exponentiation = sum * sum;
 //        }
 //    }
 //    return exponentiation;
 //}
-//Console.WriteLine(Calculate(1,2,3,4,5,6,7,8,9,10));
+//Console.WriteLine(Calculate(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
 #endregion
 
@@ -145,20 +140,34 @@ else
 //int tipindən bir array olur içində müsbət və mənfi ədədlər olur elə bir method yazın ki, bu array-i parametr olaraq qəbul etsin
 //və qəbul etdiyi array-in əvvəlcədən assign olunması məcburi olsun daha sonra içindəki mənfi ədədləri müsbətə çevirib həmin array-i geriyə qaytarsın
 
-//int[] number = { -29, 2, -30, -123, 5 };
-//int ExchangeNumbers (params int[] numbers)
+int NumberWithMinus(params int[] numbers)
+{
+    foreach (int number in numbers)
+        if (number < 0)
+        {
+            return number - (number * 2);
+        }
+        else
+        {
+            return number;
+        }
+}
+Console.WriteLine(NumberWithMinus(-5, 2, -123, 29, -5));
+
+//int[] NumberWithMinus = { -5, 2, -123, 29, -5 };
+//int change = 0;
+//foreach (int i in NumberWithMinus)
 //{
-//    int save = 0;
-//    foreach (int number in numbers)
+//    if (i < 0)
 //    {
-//        if (number < 0)
-//        {
-//            save = 1;
-//        }
+//        change=i - (i * 2);
 //    }
-//    return numbers[0];
+//    else
+//    {
+//        change=i;
+//    }
+//Console.WriteLine(change);
 //}
-//Console.WriteLine(ExchangeNumbers(-29,2,-30,-123,5));
 
 #endregion
 
